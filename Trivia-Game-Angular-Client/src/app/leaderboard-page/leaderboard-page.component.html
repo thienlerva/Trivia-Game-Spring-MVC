@@ -1,0 +1,29 @@
+<div  class = "">
+  <div style="width:1000px; margin:0 auto;" id="server-lobby-component" class="container">
+    <!-- add in dtOptions in table tag -->
+    <!-- [dtOptions]="dtOptions"  -->
+    <div class="wrap">
+      <input id="datatable-custom-search" class="data-tables-search" placeholder=" Search.." type="text" />
+    </div>
+    <a style="float: right;" (click)="rerender()"><i class="fa fa-refresh" style="font-size:36px; padding-bottom: 5px;"></i></a>
+    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" id="lobbyList" class="stripe order-column hover">
+      <thead>
+        <tr>
+          <th>Tag</th>
+          <th>Score</th>
+          <th>Tag</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+    </table> 
+    <div class="input-group" style="width: 170px; margin-left: auto; margin-right: auto; margin-top: 15px;">
+      <span class="input-group-btn">
+        <button id="datatable-custom-prev-btn" class="btn btn-success hvr-backward hvr-sweep-to-left">Prev</button>
+      </span>
+      <input disabled id="datatable-custom-page-label" type="text" class="form-control" style="text-align: center;">
+      <span class="input-group-btn">
+        <button id="datatable-custom-next-btn" class="btn btn-success hvr-forward hvr-sweep-to-right" style="float: left;">Next</button>
+      </span>
+    </div>    
+  </div>
+</div>

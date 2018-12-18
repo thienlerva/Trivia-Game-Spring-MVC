@@ -1,0 +1,175 @@
+#upperHalf {
+   text-align: center; 
+   align-content: center;
+}
+
+h4 {
+    font-family: 'Poor Story', cursive;
+    font-size: 2.25em;
+}
+
+button:focus {
+    outline:0;
+}
+
+#upperHalf button {
+    width: 8em;
+    color: #999;
+}
+
+#nameQSeats{
+    white-space: nowrap;
+}
+
+#nameQSeats span, #createDiv{
+    padding: .25em;
+}
+
+#lowerHalf button {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+#name {
+    margin: 0 auto;
+    width: 20em;
+    height: 4em;
+}
+
+#inputs > span:nth-child(1) {
+    padding-right: 3em;
+}
+
+#inputs > span:nth-child(3) {
+    padding-left: 3em;
+}
+
+#createDiv {
+    padding-top: 1em;
+}
+
+#createBtn {
+    width: 4.5em;
+}
+
+#username {
+    margin: 0 auto;
+}
+
+#nameInput {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+}
+
+#usernameInput {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+}
+
+p {
+    text-decoration: none;
+}
+
+.categorie-box-label {
+    text-shadow: 1px 3px 2px rgba(0,0,0,0.3);
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+// copy under here
+
+.catIcon {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    font-size: 5em;
+}
+
+.catIconButton {
+    text-decoration: none;
+    //border: 3px solid black;
+    border-radius: 25px;
+    background: #e98c01;
+    margin-top: 3em;
+    height: 15em;
+    width: 15em;
+}
+
+.catBtnDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hvr-grow-rotate {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+.hvr-grow-rotate:hover, .hvr-grow-rotate:focus, .hvr-grow-rotate:active {
+    -webkit-transform: scale(1.1) rotate(4deg);
+    transform: scale(1.1) rotate(4deg);
+}
+
+.hvr-fade {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    overflow: hidden;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-property: color, background-color;
+    transition-property: color, background-color;
+}
+.hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
+    background-color: #DB363C;
+    color: white;
+}
+
+.dropbtn {
+    background-color: white;
+    color: white;
+    padding: 12px;
+    font-size: 12px;
+    border: none;
+  }
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown-content a:hover {background-color: #DB363C;}
+  
+.dropdown:hover .dropdown-content {display: block;}
+  
+.dropdown:hover .dropbtn {background-color: green;}

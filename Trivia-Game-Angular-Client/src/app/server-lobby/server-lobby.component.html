@@ -1,0 +1,33 @@
+<div  class = "">
+  <div style="width:1000px; margin:0 auto;" id="server-lobby-component" class="container">
+    <!-- add in dtOptions in table tag -->
+    <!-- [dtOptions]="dtOptions"  -->
+
+    <div class="wrap">
+        <input id="userInput" [(ngModel)]="username" class = "data-tables-search" placeholder=" Username" type="text"/>
+        <br>
+        <br>
+        <input id = "datatable-custom-search" class = "data-tables-search" placeholder= " Search.."type="text"/>
+    </div>
+    <a style="float: right;" (click)="rerender()"><i class="fa fa-refresh" style="font-size:36px; padding-bottom: 5px;"></i></a>
+      <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" id="lobbyList" class="cell-border order-column hover">
+        <thead>
+          <tr>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Subscriber Name</th>
+              <th>some data</th>
+          </tr>
+      </thead>
+      </table>
+      <div class="input-group" style = "width: 170px; margin-left: auto; margin-right: auto; margin-top: 15px;">
+          <span class="input-group-btn">
+              <button id = "datatable-custom-prev-btn" class = "btn btn-success hvr-backward hvr-sweep-to-left">Prev</button>
+            </span>
+          <input id = "datatable-custom-page-label" disabled type="text" class="form-control" style="text-align: center;">
+          <span class="input-group-btn">
+            <button id = "datatable-custom-next-btn" class = "btn btn-success hvr-forward hvr-sweep-to-right" style="float: left;">Next</button>
+          </span>
+        </div>
+    </div>
+</div>

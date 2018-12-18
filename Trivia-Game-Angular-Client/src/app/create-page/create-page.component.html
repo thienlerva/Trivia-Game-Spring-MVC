@@ -1,0 +1,131 @@
+<div class="container">
+  <div class="row">
+    <div id="upperHalf">
+      <div id="nameQSeats">
+          <h1 class="categorie-box-label">Create New Lobby</h1>
+          <span id="name" class="input-group mb-3 form-horizontal">
+          <input [(ngModel)]="name" id="nameInput" type="text" class="form-control" placeholder="Lobby Name" aria-describedby="basic-addon1">
+        </span>
+        <div id="inputs" class="form-inline">
+          <span class="dropdown col-3 form-horizontal">
+            <div class="dropdown">
+              <button class="dropbtn btn btn-success">{{questions}} Questions</button>
+              <div class="dropdown-content">
+                <a (click)='selectedQuestions(5)'>5</a>
+                <a (click)='selectedQuestions(10)'>10</a>
+                <a (click)='selectedQuestions(20)'>20</a>
+              </div>
+            </div>
+          </span>
+          <span id="username" class="input-group mb-3 form-horizontal">
+            <input [(ngModel)]="username" id="usernameInput" type="text" class="form-control" placeholder="Username"
+              aria-describedby="basic-addon1">
+          </span>
+          <span class="dropdown col-3 form-horizontal">
+            <div class="dropdown">
+              <button class="dropbtn btn btn-success">{{seats}} Seats</button>
+              <div class="dropdown-content">
+                <a (click)='selectedSeats(5)'>5</a>
+                <a (click)='selectedSeats(10)'>10</a>
+              </div>
+            </div>
+          </span>
+        </div>
+      </div>
+      <!-- <div id="privateToggle" class="col-3" (click)="privateOrPublic()">
+          <input (click)="private=!private" type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="Public"
+          data-off="Private" data-onstyle="success" data-offstyle="danger">
+        </div> -->
+      <div id="createDiv">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="createBtn" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false" (click)="create()">
+          Create
+        </button>
+      </div>
+    </div>
+    <!-- <div id="penner">
+      <div class="line">
+        <div class="small stretched square linear" style="transform: translateY(0px);">T</div>
+      </div>
+      <div class="line">
+        <div class="small stretched square InQuad" style="transform: translateY(0px);">R</div>
+      </div>
+      <div class="line">
+        <div class="small stretched square InCubic" style="transform: translateY(0px);">I</div>
+      </div>
+      <div class="line">
+        <div class="small stretched square InQuart" style="transform: translateY(0px);">V</div>
+      </div>
+      <div class="line">
+        <div class="small stretched square InQuint" style="transform: translateY(0px);">I</div>
+      </div>
+      <div class="line">
+        <div class="small stretched square InSine" style="transform: translateY(0px);">A</div>
+      </div>
+    </div> -->
+
+    <hr style="width: 90%; margin-left: auto; margin-right: auto;">
+    <!--Load all the categories-->
+    <h1 class="categorie-box-label">Select a Trivia Category</h1>
+    <div id="lowerHalf">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="catBtnDiv col-xs-6 col-sm-6 col-md-4 col-lg-4 ">
+            <button (click)="selectCategory('Geography')" class="hvr-grow-rotate hvr-fade top-buffer catIconButton">
+              <h4>Geography</h4>
+              <p class="catIcon fa fa-globe"></p>
+            </button>
+          </div>
+          <div class="catBtnDiv col-xs-6 col-sm-6 col-md-4 col-lg-4 ">
+            <button (click)="selectCategory('History')" class="hvr-grow-rotate hvr-fade top-buffer catIconButton">
+              <h4>History</h4>
+              <p class="catIcon fa fa-history"></p>
+            </button>
+          </div>
+          <div class="catBtnDiv col-xs-6 col-sm-6 col-md-4 col-lg-4">
+            <button (click)="selectCategory('Sports')" class="hvr-grow-rotate hvr-fade top-buffer catIconButton">
+              <h4>Sports</h4>
+              <p class="catIcon fa fa-futbol-o"></p>
+            </button>
+          </div>
+          <div class="catBtnDiv col-xs-6 col-sm-6 col-md-4 col-lg-4 ">
+            <button (click)="selectCategory('Politics')" class="hvr-grow-rotate hvr-fade top-buffer catIconButton">
+              <h4>Politics</h4>
+              <p class="catIcon fa fa-handshake-o"></p>
+            </button>
+          </div>
+          <div class="catBtnDiv col-xs-6 col-sm-6 col-md-4 col-lg-4 ">
+            <button (click)="selectCategory('Art')" class="hvr-grow-rotate hvr-fade top-buffer catIconButton">
+              <h4>Art</h4>
+              <p class="catIcon fa fa-paint-brush"></p>
+            </button>
+          </div>
+          <div class="catBtnDiv col-xs-6 col-sm-6 col-md-4 col-lg-4 ">
+            <button (click)="selectCategory('Math')" class="hvr-grow-rotate hvr-fade top-buffer catIconButton">
+              <h4>Math</h4>
+              <p class="catIcon fa fa-times"></p>
+            </button>
+          </div>
+          <div class="catBtnDiv col-xs-6 col-sm-6 col-md-4 col-lg-4 ">
+            <button (click)="selectCategory('Computer')" class="hvr-grow-rotate hvr-fade top-buffer catIconButton">
+              <h4>Computers</h4>
+              <p class="catIcon fa fa-desktop"></p>
+            </button>
+          </div>
+          <div class="catBtnDiv col-xs-6 col-sm-6 col-md-4 col-lg-4 ">
+            <button (click)="selectCategory('Movies')" class="hvr-grow-rotate hvr-fade top-buffer catIconButton">
+              <h4>Movies</h4>
+              <p class="catIcon fa fa-film"></p>
+            </button>
+          </div>
+          <div class="catBtnDiv col-xs-12 col-sm-12 col-md-4 col-lg-4 ">
+            <button (click)="selectCategory('All')" class="hvr-grow-rotate hvr-fade top-buffer catIconButton">
+              <h4>All</h4>
+              <p class="catIcon fa fa-circle-thin"></p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,79 @@
+<div align="center" class="row justify-content-center">
+  <div>
+    <h1 class = "join-private-label">Join Private Lobby</h1>
+  </div>
+  <div>
+    <input [(ngModel)]="game_key" class = "form-control join-private-input" id="pin" type="text" placeholder="Enter Lobby Key">
+    <input [(ngModel)]="username" class = "form-control join-private-input" id="username" type="text" placeholder="Enter Username">
+    <p></p>
+    <button class = "btn btn-success join-private-button" (click)="joinLobby()">Join</button>
+    <hr style = "width: 90%; margin-left: auto; margin-right: auto; border-color: #6c6b68">
+    <h1 class = "categorie-box-label">Create a New Game Lobby</h1>
+  </div>
+  <div>
+    <button class = "btn btn-success join-private-button" [routerLink]="['/create']">Create Game</button>
+  </div>
+</div>
+<hr style = "width: 90%; margin-left: auto; margin-right: auto; border-color: #6c6b68">
+<!--Load all the categories-->
+<h1 class = "categorie-box-label">Select a Trivia Category</h1>
+<div id="lowerHalf">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="catBtnDiv col-xs-6 col-sm-6 col-md-4 col-lg-4 ">
+        <button (click)="selectCategory('Geography')" class="hvr-grow-rotate hvr-fade top-buffer catIconButton">
+          <h4>Geography</h4>
+          <p class="catIcon fa fa-globe"></p>
+        </button>
+      </div>
+      <div class="catBtnDiv col-xs-6 col-sm-6 col-md-4 col-lg-4 ">
+        <button (click)="selectCategory('History')" class="hvr-grow-rotate hvr-fade top-buffer catIconButton">
+          <h4>History</h4>
+          <p class="catIcon fa fa-history"></p>
+        </button>
+      </div>
+      <div class="catBtnDiv col-xs-6 col-sm-6 col-md-4 col-lg-4">
+        <button (click)="selectCategory('Sports')" class="hvr-grow-rotate hvr-fade top-buffer catIconButton">
+          <h4>Sports</h4>
+          <p class="catIcon fa fa-futbol-o"></p>
+        </button>
+      </div>
+      <div class="catBtnDiv col-xs-6 col-sm-6 col-md-4 col-lg-4 ">
+        <button (click)="selectCategory('Politics')" class="hvr-grow-rotate hvr-fade top-buffer catIconButton">
+          <h4>Politics</h4>
+          <p class="catIcon fa fa-handshake-o"></p>
+        </button>
+      </div>
+      <div class="catBtnDiv col-xs-6 col-sm-6 col-md-4 col-lg-4 ">
+        <button (click)="selectCategory('Art')" class="hvr-grow-rotate hvr-fade top-buffer catIconButton">
+          <h4>Art</h4>
+          <p class="catIcon fa fa-paint-brush"></p>
+        </button>
+      </div>
+      <div class="catBtnDiv col-xs-6 col-sm-6 col-md-4 col-lg-4 ">
+        <button (click)="selectCategory('Math')" class="hvr-grow-rotate hvr-fade top-buffer catIconButton">
+          <h4>Math</h4>
+          <p class="catIcon fa fa-times"></p>
+        </button>
+      </div>
+      <div class="catBtnDiv col-xs-6 col-sm-6 col-md-4 col-lg-4 ">
+        <button (click)="selectCategory('Computer')" class="hvr-grow-rotate hvr-fade top-buffer catIconButton">
+          <h4>Computers</h4>
+          <p class="catIcon fa fa-desktop"></p>
+        </button>
+      </div>
+      <div class="catBtnDiv col-xs-6 col-sm-6 col-md-4 col-lg-4 ">
+        <button (click)="selectCategory('Movies')" class="hvr-grow-rotate hvr-fade top-buffer catIconButton">
+          <h4>Movies</h4>
+          <p class="catIcon fa fa-film"></p>
+        </button>
+      </div>
+      <div class="catBtnDiv col-xs-12 col-sm-12 col-md-4 col-lg-4 ">
+        <button (click)="selectCategory('All')" class="hvr-grow-rotate hvr-fade top-buffer catIconButton">
+          <h4>All</h4>
+          <p class="catIcon fa fa-circle-thin"></p>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
